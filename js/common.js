@@ -121,4 +121,6 @@ $('#answer-change').click(function() {
     // 問題4
     $('.answer_input4').css('display','none');
     $('#judge4').html('<img src="./img/answer4.png" style="width:200px height:50px">');
+// 　　十字架フェードアウト
+    $('#cross).fadeOut(1000);
 });
