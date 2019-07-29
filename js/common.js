@@ -40,7 +40,7 @@ $(function(){
 $('.answer_send1').click(function() {
      answer1 = document.getElementById("textBox_a1").value;
     console.log(answer1);
-    if(answer1 == "かせき"){
+    if(answer1 == "stamp" || answer1 == "STAMP"){
         hint ++;
         console.log(hint);
         $(".clear1").html('<img src="./img/q1.clear.png">');
@@ -58,7 +58,7 @@ $('.answer_send1').click(function() {
 $('.answer_send2').click(function() {
     answer2 = document.getElementById("textBox_a2").value;
    console.log(answer2);
-   if(answer2 == "バンド"){
+   if(answer2 == "春"){
        hint += 2;
        console.log(hint);
        $('.clear2').html('<img src="./img/q2.clear.png">');
@@ -75,7 +75,7 @@ $('.answer_send2').click(function() {
 $('.answer_send3').click(function() {
     answer3 = document.getElementById("textBox_a3").value;
    console.log(answer3);
-   if(answer3 == "春"){
+   if(answer3 == "バンド"){
        hint += 3 ;
        console.log(hint);
        $('.clear3').html('<img src="./img/q3.clear.png">');
@@ -90,9 +90,8 @@ $('.answer_send3').click(function() {
 
 $('.answer_send4').click(function() {
     answer4 = document.getElementById("textBox_a4").value;
-   // target = document.forms.form1_a1.textBox1_a1.value;
    console.log(answer4);
-   if(answer4 == "stamp" || answer4 == "STAMP"){
+   if(answer4 == "かせき"){
         hint += 4 ;
         console.log(hint);
         $('.clear4').html('<img src="./img/q4.clear.png">');
@@ -100,7 +99,6 @@ $('.answer_send4').click(function() {
         if(hint >= 10){
             $('.hint').css('display','block');
         }
-        // $('.float_slide').addClass('effect-fade');   
    } else {
        $('#judge4').html('<p style="color: red">不正解です</>');
 
@@ -123,4 +121,5 @@ $('#answer-change').click(function() {
     $('#judge4').html('<img src="./img/answer4.png" style="width:200px height:50px">');
     // 十字架フェードアウト
     $('#cross').fadeOut(1000);
+    $('#answer-change').css('display','none');
 });
